@@ -1,0 +1,33 @@
+# Copyright 2026 Ghislain Bourgeois
+#
+name: winbox4
+base: core24
+version: '4.1'
+summary: WinBox is a tool to manage your Mikrotik equipment
+description: |
+  WinBox is the Mikrotik GUI tool to manage network equipment
+  running RouterOS or SwitchOS.
+
+grade: stable
+confinement: strict
+
+apps:
+  winbox:
+    command: WinBox
+    extensions: [gnome]
+    plugs:
+      - home
+      - network
+      - opengl
+
+parts:
+  winbox:
+    plugin: dump
+    source: https://download.mikrotik.com/routeros/winbox/${CRAFT_PROJECT_VERSION}/WinBox_Linux.zip
+    source-type: zip
+    stage-packages:
+      - libxcb-icccm4
+      - libxcb-image0
+      - libxcb-keysyms1
+      - libxcb-render-util0
+      - libxcb-shape0
