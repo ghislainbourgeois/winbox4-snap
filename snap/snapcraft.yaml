@@ -3,7 +3,7 @@
 name: winbox4
 title: WinBox 4
 base: core24
-version: '4.1'
+version: '4.2'
 summary: WinBox is a tool to manage your Mikrotik equipment
 source-code: https://github.com/ghislainbourgeois/winbox4-snap
 description: |
