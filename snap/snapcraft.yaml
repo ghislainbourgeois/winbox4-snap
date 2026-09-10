@@ -16,7 +16,7 @@ confinement: strict
 apps:
   winbox:
     command: WinBox
-    extensions: [gnome]
+    extensions: [kde-neon-6]
     plugs:
       - home
       - network
